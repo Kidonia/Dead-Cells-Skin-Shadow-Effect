@@ -10,14 +10,15 @@ total_anim_list = []
 target_anim_list = []
 
 for folder_name in folder_names_list:
-    skin_path = os.path.join(folder_path, folder_name)
+    if folder_name.find("beheaded") > -1 or folder_name == "king":
+        print(folder_name)
+        skin_path = os.path.join(folder_path, folder_name)
 
-    for idle in idlename:
-        idle_path = os.path.join(skin_path, idle)
-
-        target_path = os.path.join(target_folder, folder_name+"_"+idle)
-        total_anim_list.append(idle_path)
-        target_anim_list.append(target_path)
+        for idle in idlename:
+            idle_path = os.path.join(skin_path, idle)
+            target_path = os.path.join(target_folder, folder_name+"_"+idle)
+            total_anim_list.append(idle_path)
+            target_anim_list.append(target_path)
 
 
 print(total_anim_list)
