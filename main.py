@@ -177,11 +177,11 @@ ExpandAll = [
     'AtlasTool',
     '-ExpandAll',
     '-indir',
-    r'C:\Users\刘舒瑞\PycharmProjects\pythonProject2\normal_files',
+    r'.\normal_files',
     '-OutDir',
     r'.\expand_out'
 ]
-# subprocess.run(ExpandAll)
+subprocess.run(ExpandAll)
 print("动作贴图解包完成！")
 
 print("执行动作贴图打包：")
@@ -196,7 +196,7 @@ for Cskin in skinName_list:
         rf'.\collapse_out\{Cskin}.png',
         # '-ascii'
     ]
-    # subprocess.run(Collapse)
+    subprocess.run(Collapse)
     print("打包完成！")
 
     # 定义源文件夹（文件夹A）和目标文件夹（文件夹B）的路径，你需要替换为实际的路径
@@ -216,6 +216,7 @@ for Cskin in skinName_list:
             except Exception as e:
                 print(f"移动文件 {file} 时出现错误: {e}")
 
+"""
 "读取去色大图" \
 "读取阴影" \
 "遍历阴影图" \
@@ -224,3 +225,4 @@ for Cskin in skinName_list:
 "计算纵坐标+4后对应的颜色" \
 "将颜色涂到原始去色大图上"
 print()
+"""
