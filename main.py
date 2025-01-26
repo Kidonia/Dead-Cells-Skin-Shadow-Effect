@@ -4,6 +4,8 @@ import time
 import cv2
 import os
 import numpy as np
+
+from heroSkins_deal import *
 from normal_deal import *
 
 origin_file_folder = r"origin_files"
@@ -216,6 +218,8 @@ for Cskin in skinName_list:
             except Exception as e:
                 print(f"移动文件 {file} 时出现错误: {e}")
 
+heroSkins_deal()
+
 """
 "读取去色大图" \
 "读取阴影" \
@@ -224,5 +228,4 @@ for Cskin in skinName_list:
 "计算这个点在色带上的横坐标，纵坐标" \
 "计算纵坐标+4后对应的颜色" \
 "将颜色涂到原始去色大图上"
-print()
 """
